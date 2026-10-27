@@ -1,0 +1,435 @@
+# ==============================================================================
+# FluentCV / FRESH Resume Schema (v0.6.0) - Versión en Español
+# Especificación: https://github.com/fluentdesk/FluentCV & https://github.com/fresh-standard
+# Candidata: Areliez Vargas - Automation Engineer (SDET / AI-Assisted QA)
+# ==============================================================================
+
+name: Areliez Vargas
+
+meta:
+  format: FRESH@0.6.0
+  version: 0.4.0
+
+info:
+  label: QA Automation Engineer Senior | API & Web | AI-Assisted QA
+  characterClass: Ingeniera de Calidad de Software
+  brief: >-
+    Ingeniera de automatización QA con más de 6 años de experiencia construyendo y escalando
+    frameworks de pruebas automatizadas para entornos Web, API y Desktop utilizando Java, Python
+    y C#. Especializada en marcos BDD (Cucumber, Selenium, Selenide, REST Assured) y en la
+    integración continua mediante pipelines en Azure DevOps y GitLab CI. Pionera en la incorporación
+    de herramientas de IA (Claude, Claude Code, integraciones personalizadas con MCP) para optimizar
+    el ciclo de vida del testing, acelerar la creación de escenarios y agilizar las revisiones de código en Pull Requests.
+  quote: La calidad no es un acto, es un hábito.
+
+contact:
+  email: areliez.vargas@jalasoft.com
+  phone: "+591 70376674"
+  website: https://github.com/AKatrin
+  other:
+    - label: Correo Personal
+      flavor: email
+      value: areliez.vargas@gmail.com
+
+location:
+  city: Cochabamba
+  region: Cochabamba
+  country: Bolivia
+  countryCode: BO
+
+social:
+  - label: GitHub
+    network: GitHub
+    user: AKatrin
+    url: https://github.com/AKatrin
+  - label: LinkedIn
+    network: LinkedIn
+    user: areliez-vargas
+    url: https://linkedin.com/in/areliez-vargas
+
+employment:
+  summary: Más de 6 años de experiencia en automatización de pruebas, arquitectura de frameworks, CI/CD y QA asistido por IA.
+  history:
+    - employer: JalaSoft / Proyectos de Clientes
+      position: Senior Automation Engineer — Web, API & Mobile
+      start: '2025-01'
+      end: current
+      url: https://www.jalasoft.com
+      location: Cochabamba, Bolivia (Remoto / Híbrido)
+      summary: Arquitectura de framework de pruebas y flujos de trabajo de QA asistidos por IA para aplicaciones empresariales Web, API y Móvil.
+      keywords:
+        - Java
+        - Selenide
+        - TestNG
+        - REST Assured
+        - Cucumber
+        - Maven
+        - SQL Server
+        - Azure DevOps
+        - Allure
+        - Claude Code
+        - MCP
+        - Prettier
+        - Checkstyle
+        - Faker
+      highlights:
+        - Configuré políticas de calidad y formato de código mediante Checkstyle y Prettier en los repositorios de automatización, reduciendo observaciones repetitivas y unificando los estándares del equipo.
+        - Diseñé un pipeline de CI en Azure DevOps con fases independientes para Web, Móvil, API y módulos Core, integrando validación de estilo y pruebas unitarias como validaciones previas obligatorias al merge.
+        - Integré la librería Java Faker y conectividad con SQL Server para generar datos de prueba dinámicos y validar el backend, eliminando dependencias de valores quemados (hardcoded).
+        - Programé pipelines de CI/CD para ejecuciones nocturnas de regresión y smoke tests, brindando retroalimentación inmediata al inicio de cada jornada.
+        - Implementé flujos de trabajo asistidos por IA utilizando Claude y Claude Code para convertir casos de prueba manuales en escenarios Cucumber/Gherkin, generar step definitions en Java y acelerar la creación de scripts de UI y API.
+        - Desarrollé skills reutilizables de Claude e integraciones vía Model Context Protocol (MCP) con Azure DevOps para automatizar la creación de historias de usuario y tickets, vinculándolos directamente a sus casos manuales para garantizar trazabilidad.
+        - Analicé logs y reportes de Allure para diferenciar defectos funcionales reales de fallos por cambios en locators, timeouts o actualizaciones de interfaz; revisé Pull Requests para detectar waits inestables y pasos duplicados.
+
+    - employer: JalaSoft / Proyectos de Clientes
+      position: Automation Engineer — Automatización API y GUI
+      start: '2024-01'
+      end: '2025-01'
+      url: https://www.jalasoft.com
+      summary: Automatización de pruebas para el proyecto Application Tracking System v2, validando APIs REST e interfaces web.
+      keywords:
+        - Java
+        - Selenium WebDriver
+        - TestNG
+        - REST Assured
+        - Cucumber
+        - Gradle
+        - GitLab CI
+        - PostgreSQL
+        - Docker
+        - Postman
+        - Allure
+      highlights:
+        - Desarrollé y mantuve suites automatizadas para la plataforma Application Tracking System v2 utilizando Java, Selenium, TestNG, REST Assured y Cucumber bajo el enfoque BDD y el patrón Page Object Model (POM).
+        - Ejecuté pruebas automatizadas mediante pipelines en GitLab CI/CD para flujos funcionales, de regresión y de aceptación, analizando reportes de Allure para identificar defectos funcionales.
+        - Optimicé el llenado de formularios parametrizando los datos recibidos por el usuario, incrementando la reutilización y flexibilidad de los escenarios de prueba.
+        - Integré Checkstyle y Faker en los flujos de Gradle para asegurar la consistencia del código y aprovisionar datos dinámicos.
+        - Realicé validación funcional de APIs REST con Postman y REST Assured, y participé activamente en revisiones de código (code reviews).
+
+    - employer: JalaSoft / Proyectos de Clientes
+      position: Automation Engineer — Pruebas de Automatización de Escritorio
+      start: '2023-01'
+      end: '2024-01'
+      url: https://www.jalasoft.com
+      summary: Pruebas automatizadas y ejecución continua en la nube para aplicaciones de escritorio en Windows.
+      keywords:
+        - TestComplete
+        - TestExecute
+        - JavaScript
+        - Azure DevOps
+        - Azure Virtual Machines
+        - Netlify
+        - Allure
+        - Confluence
+      highlights:
+        - Automaticé pruebas funcionales y de regresión para aplicaciones de escritorio utilizando SmartBear TestComplete y TestExecute con JavaScript.
+        - Automaticé el aprovisionamiento de infraestructura en Azure (máquinas virtuales dedicadas con inicio y apagado programado y agentes de Azure DevOps) para ejecuciones tras cada merge a la rama principal y nightly builds.
+        - Desarrollé pipelines en Azure DevOps para disparar las pruebas y publicar automáticamente los resultados y reportes de Allure en Netlify, ofreciendo visibilidad inmediata al equipo.
+        - Depuré el repositorio eliminando funciones obsoletas y documenté en Confluence el estado de los casos, la configuración de los pipelines y el entorno virtual.
+
+    - employer: JalaSoft
+      position: Automation Engineer — Automatización Web
+      start: '2022-01'
+      end: '2023-01'
+      url: https://www.jalasoft.com
+      summary: Automatización de pruebas y documentación viva para la aplicación Planning Poker.
+      keywords:
+        - Java
+        - Selenium WebDriver
+        - TestNG
+        - REST Assured
+        - Cucumber
+        - Maven
+        - GitLab CI
+        - Lombok
+        - Owner
+        - Cuke-Doctor
+        - Allure
+      highlights:
+        - Mantuve y amplié suites de automatización web UI para la aplicación Planning Poker utilizando Java, Selenium WebDriver, TestNG y Cucumber BDD.
+        - Refactoricé el framework aplicando Page Object Model (POM) y principios de Programación Orientada a Objetos, reduciendo código repetitivo con Lombok y Owner.
+        - Diseñé escenarios automatizados `@in-progress` desde mockups y especificaciones incluso cuando las historias carecían de criterios de aceptación completos.
+        - Centralicé reportes de Checkstyle, cobertura y Allure mediante el plugin Site de Maven y generé documentación viva con Cuke-Doctor.
+        - Optimicé las etapas de ejecución del pipeline de GitLab CI según tipo de ejecución (programadas, builds y merges).
+
+    - employer: JalaSoft / Proyectos de Clientes
+      position: Automation Engineer — Pruebas Web, API y Rendimiento
+      start: '2020-01'
+      end: '2023-01'
+      url: https://www.jalasoft.com
+      summary: Pruebas multiplataforma en Salesforce, validación de APIs de alto rendimiento y testing de concurrencia.
+      keywords:
+        - Java
+        - Selenide
+        - Selenium WebDriver
+        - REST Assured
+        - JUnit
+        - Cucumber
+        - JMeter
+        - Jenkins
+        - Selenium Grid
+        - Docker
+        - Strategy Pattern
+      highlights:
+        - Diseñé e implementé una herramienta validadora de APIs en Java y REST Assured capaz de procesar más de 3,000 peticiones concurrentes con múltiples tipos de autenticación y reportes detallados en Excel.
+        - Implementé soporte para autenticación configurable y endpoints dinámicos mediante archivos de propiedades, respaldado por pruebas unitarias en JUnit.
+        - Construí un framework de pruebas de rendimiento integrando Apache JMeter con Selenium WebDriver para simular transacciones de usuarios reales y carga a nivel de UI.
+        - Mantuve suites automatizadas cross-browser (Chrome y Firefox) en Salesforce, aplicando patrones de diseño (Factory y Strategy) para eliminar redundancia.
+        - Ejecuté pruebas automatizadas distribuidas mediante Jenkins y Selenium Grid, investigando fallos por cambios en locators y timeouts.
+
+    - employer: JalaSoft / Proyectos de Clientes
+      position: Automation Engineer — Automatización Web
+      start: '2020-01'
+      end: '2021-01'
+      url: https://www.jalasoft.com
+      summary: Desarrollo y mantenimiento de pruebas web automatizadas bajo BDD.
+      keywords:
+        - Java
+        - Selenium WebDriver
+        - JUnit
+        - TestNG
+        - Cucumber
+        - BDD
+        - Gherkin
+        - Jenkins
+      highlights:
+        - Implementé y mantuve escenarios automatizados de pruebas web utilizando Java, Selenium WebDriver, JUnit, TestNG y Cucumber.
+        - Desarrollé step definitions en Cucumber, page objects reutilizables y hooks siguiendo estrictamente la sintaxis Gherkin.
+        - Mantuve suites de regresión frente a frecuentes cambios en las aplicaciones, reportando defectos confirmados en Jira.
+
+    - employer: JalaSoft / Proyectos de Clientes
+      position: DevOps Engineer — Infraestructura y Monitoreo
+      start: '2019-01'
+      end: '2020-01'
+      url: https://www.jalasoft.com
+      summary: Migración de infraestructura a contenedores y observabilidad de sistemas en tiempo real.
+      keywords:
+        - Docker Swarm
+        - Ubuntu
+        - AWS EC2
+        - CloudWatch
+        - Prometheus
+        - Grafana
+        - cAdvisor
+        - Node Exporter
+        - Python
+        - MySQL
+        - Slack
+      highlights:
+        - Migré servicios críticos de QA (TestLink y MySQL) de servidores Windows a contenedores Ubuntu con Docker Swarm, incrementando la estabilidad del entorno.
+        - Automaticé respaldos programados de bases de datos mediante cron jobs y configuré una solución integral de monitoreo con Prometheus, Grafana, cAdvisor y Node Exporter.
+        - Desplegué aplicaciones y bases de datos en AWS EC2, configurando métricas y alertas de disponibilidad en tiempo real con CloudWatch y Pingdom.
+        - Desarrollé scripts en Python para alertas automáticas por correo electrónico y SMS ante eventos de caída de servicios, integrando notificaciones en Slack.
+
+education:
+  level: degree
+  history:
+    - institution: Universidad Mayor de San Simón
+      title: Ingeniería en Sistemas
+      area: Ingeniería de Sistemas y Ciencias de la Computación
+      studyType: Grado Universitario
+      start: '2010'
+      end: 'Presente'
+      summary: Formación en ingeniería de software, arquitectura de sistemas, algoritmos y estructuras de datos.
+
+    - institution: Fundación JalaSoft
+      title: Programa de Automatización y Desarrollo de Software
+      area: Desarrollo de Software (Java, C#, Web)
+      studyType: Programa de Especialización
+      start: '2018'
+      end: '2021'
+      summary: Capacitación intensiva en Programación Orientada a Objetos (POO), Java, C#, Xamarin, HTML5, CSS3, JavaScript y Git.
+
+    - institution: Fundación JalaSoft
+      title: Programa de Automatización de Pruebas
+      area: Automatización de Pruebas de Software
+      studyType: Programa de Especialización
+      start: '2019'
+      end: '2019'
+      summary: Especialización en metodologías de pruebas, automatización Web y API, Java, Selenium, Cucumber BDD, TestNG, Jenkins, Python y Behave.
+
+    - institution: Udemy
+      title: TestComplete con JavaScript
+      area: Automatización de Escritorio
+      studyType: Certificación
+      start: '2023'
+      end: '2023'
+      summary: Automatización de pruebas funcionales para aplicaciones de escritorio con TestComplete y JavaScript.
+
+    - institution: Universidad Mayor de San Simón / Trainers de Avantica
+      title: Curso de Control de Calidad (Quality Control)
+      area: Aseguramiento de Calidad y Metodologías de Testing
+      studyType: Certificado
+      start: '2018'
+      end: '2018'
+      summary: Fundamentos de control de calidad, diseño de casos de prueba, ciclo de vida del defecto y estándares de verificación.
+
+    - institution: Universidad Mayor de San Simón
+      title: Curso de Desarrollo Web con HTML5 y CSS
+      area: Desarrollo Frontend
+      studyType: Certificado
+      start: '2017'
+      end: '2017'
+      summary: Estándares de desarrollo web frontend, diseño responsivo y maquetación semántica.
+
+skills:
+  sets:
+    - name: Automatización de Pruebas y QA
+      level: master
+      skills:
+        - Selenium WebDriver
+        - Selenide
+        - REST Assured
+        - Cucumber (BDD)
+        - TestNG
+        - JUnit
+        - TestComplete
+        - TestExecute
+        - Appium
+        - WinAppDriver
+        - Behave
+        - Postman
+        - Apache JMeter
+        - Allure Reporting
+        - Hamcrest
+        - Faker
+
+    - name: QA Asistido por IA y Herramientas
+      level: advanced
+      skills:
+        - Claude (Anthropic)
+        - Claude Code
+        - Model Context Protocol (MCP)
+        - Skills Reutilizables de Claude
+        - Generación de Escenarios con IA
+        - Síntesis Automatizada de Gherkin y Steps
+        - Revisión de Código y PRs con IA
+
+    - name: Lenguajes de Programación y Scripting
+      level: advanced
+      skills:
+        - Java (Core y Avanzado)
+        - Python
+        - JavaScript
+        - C#
+        - Ruby
+        - SQL
+        - Bash / Shell
+        - HTML5 y CSS3
+
+    - name: CI/CD e Infraestructura Cloud
+      level: advanced
+      skills:
+        - Azure DevOps (Pipelines y Agentes)
+        - GitLab CI/CD
+        - Jenkins
+        - Docker y Docker Compose
+        - Docker Swarm
+        - Microsoft Azure (VMs)
+        - AWS (EC2, CloudWatch)
+        - Prometheus y Grafana
+
+    - name: Arquitectura de Frameworks y Metodologías
+      level: master
+      skills:
+        - Page Object Model (POM)
+        - Behavior-Driven Development (BDD)
+        - Patrones de Diseño (Factory, Strategy)
+        - Pruebas Guiadas por Datos (Data-Driven)
+        - Documentación Viva (Cuke-Doctor)
+        - Metodologías Ágiles / Scrum
+        - Git / GitHub / GitLab / Bitbucket
+        - Maven y Gradle
+
+    - name: Bases de Datos y Gestión de Datos de Prueba
+      level: intermediate
+      skills:
+        - Microsoft SQL Server
+        - PostgreSQL
+        - MySQL
+        - Generación Dinámica de Datos (Faker)
+        - Validación de Estado en Base de Datos
+
+projects:
+  - title: AutomationGUIPivotal
+    category: open-source
+    role: Creadora y Arquitecta
+    url: https://github.com/AKatrin/AutomationGUIPivotal
+    repo: https://github.com/AKatrin/AutomationGUIPivotal
+    summary: Framework integral de pruebas automatizadas para Pivotal Tracker con validación híbrida GUI y API.
+    keywords:
+      - Java
+      - Selenium WebDriver
+      - Cucumber BDD
+      - TestNG
+      - REST Assured
+      - Gradle
+      - POM
+    highlights:
+      - Implementé una arquitectura basada en Page Object Model (POM) integrando validación de backend API con verificación de interfaz.
+      - Integré Gradle con ejecución de escenarios Gherkin en Cucumber y reportes detallados.
+
+  - title: Motor Validador de APIs REST de Alto Rendimiento
+    category: enterprise
+    role: Lead Automation Engineer
+    summary: Motor de validación batch en Java y REST Assured capaz de ejecutar 3,000+ peticiones con autenticación dinámica.
+    keywords:
+      - Java
+      - REST Assured
+      - Multi-Auth
+      - Apache POI
+      - JUnit
+    highlights:
+      - Diseñé el procesamiento concurrente de más de 3,000 peticiones con múltiples esquemas de autenticación configurables.
+      - Automaticé la generación de reportes de auditoría en Excel con estados de respuesta y diferencias en el payload.
+
+  - title: SeleniumPOM Web Automation Framework
+    category: open-source
+    role: Creadora
+    url: https://github.com/AKatrin/SeleniumPOM
+    repo: https://github.com/AKatrin/SeleniumPOM
+    summary: Framework escalable de automatización web que demuestra una arquitectura limpia con Page Object Model y ExtentReports.
+    keywords:
+      - Java
+      - Selenium WebDriver
+      - TestNG
+      - ExtentReports
+      - Maven
+    highlights:
+      - Implementación limpia de POM con esperas explícitas, configuración centralizada y reportes HTML visuales.
+
+  - title: Flujo de Trabajo de QA y MCP Asistido por IA
+    category: enterprise
+    role: Automation Engineer / Implementadora
+    summary: Orquestación del ciclo de vida de tareas y pruebas integrando Claude Code con Azure DevOps mediante MCP.
+    keywords:
+      - Claude Code
+      - MCP
+      - Azure DevOps
+      - Gherkin
+      - Prompt Engineering
+    highlights:
+      - Creación automática de historias de usuario y casos de prueba en Azure DevOps a partir de especificaciones.
+      - Conversión automatizada de casos manuales a escenarios Gherkin ejecutables, step definitions en Java y pruebas de API.
+
+languages:
+  - language: Español
+    level: Nativo
+
+  - language: Inglés
+    level: Profesional / Avanzado (Lectura, Escucha, Escritura y Conversación)
+
+interests:
+  - name: Ingeniería de Calidad de Software
+    summary: Arquitecturas de continuous testing, prácticas SDET y eliminación de flakiness en pruebas.
+    keywords:
+      - Test Architecture
+      - Clean Code
+      - BDD
+
+  - name: IA Aplicada a la Ingeniería de Software
+    summary: Uso de flujos agenticos y tool-calling (MCP) con LLMs para automatizar la verificación de software.
+    keywords:
+      - Agentic AI
+      - MCP
+      - Automated Code Review

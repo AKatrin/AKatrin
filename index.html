@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areliez Vargas - Senior QA Automation Engineer | CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --accent: #06b6d4;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-dark: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.2s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 2rem 80px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-brief {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .hero-contact-item:hover {
+            color: var(--primary);
+        }
+
+        .hero-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 2rem;
+        }
+
+        .section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .section:nth-child(even) .timeline-item {
+            background: var(--bg-primary);
+        }
+
+        .timeline-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--bg-primary);
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .section:nth-child(even) .timeline-item::before {
+            border-color: var(--bg-secondary);
+        }
+
+        .timeline-header {
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .timeline-summary {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-highlights li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .timeline-highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .timeline-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .keyword-tag {
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .section:nth-child(even) .skill-category {
+            background: var(--bg-primary);
+        }
+
+        .skill-category:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .skill-category-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .skill-category-level {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.4rem 0.9rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .section:nth-child(even) .project-card {
+            background: var(--bg-primary);
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            padding: 1.5rem 1.5rem 1rem;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-summary {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .project-body {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .project-highlights li {
+            padding: 0.4rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .project-highlights li::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .project-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-keyword {
+            padding: 0.2rem 0.6rem;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.2s ease;
+        }
+
+        .project-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .education-item {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .section:nth-child(even) .education-item {
+            background: var(--bg-primary);
+        }
+
+        .education-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .education-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .education-content {
+            flex: 1;
+        }
+
+        .education-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .education-institution {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-summary {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Languages & Interests */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .section:nth-child(even) .info-card {
+            background: var(--bg-primary);
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .info-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-name {
+            font-weight: 500;
+        }
+
+        .language-level {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .interest-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .interest-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .interest-item:first-child {
+            padding-top: 0;
+        }
+
+        .interest-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .interest-summary {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .interest-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .interest-keyword {
+            padding: 0.2rem 0.6rem;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow);
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: -2rem;
+            }
+
+            .timeline-item {
+                padding: 1.5rem;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-contact {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .education-item {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Print styles */
+        @media print {
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 2rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+                page-break-inside: avoid;
+            }
+
+            .timeline-item,
+            .skill-category,
+            .project-card,
+            .education-item,
+            .info-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            .social-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Areliez Vargas</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container fade-in">
+            <div class="hero-avatar">AV</div>
+            <h1 class="hero-name">Areliez Vargas</h1>
+            <h2 class="hero-title">Senior QA Automation Engineer | API & Web | AI-Assisted QA</h2>
+            <p class="hero-brief">
+                Senior Automation Engineer with 6+ years of experience designing and scaling automated
+                testing frameworks across Web, API, and Desktop environments using Java, Python, and C#.
+                Specialized in Behavior-Driven Development and robust CI/CD integration with AI tools.
+            </p>
+            <p class="hero-quote">"Quality is not an act, it is a habit."</p>
+            <div class="hero-contact">
+                <a href="mailto:areliez.vargas@jalasoft.com" class="hero-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    areliez.vargas@jalasoft.com
+                </a>
+                <a href="tel:+59170376674" class="hero-contact-item">
+                    <i class="fas fa-phone"></i>
+                    +591 70376674
+                </a>
+                <span class="hero-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Cochabamba, Bolivia
+                </span>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/AKatrin" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/areliez-vargas" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:areliez.vargas@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">6+ years of specialized experience in automated testing, framework design, CI/CD, and AI-assisted workflows</p>
+            </div>
+            <div class="timeline">
+                <!-- Experience items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Comprehensive skill set across automation, AI tooling, and infrastructure</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Open source contributions and enterprise automation solutions</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-subtitle">Academic background and professional development</p>
+            </div>
+            <div class="education-grid">
+                <!-- Education will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">About & More</h2>
+                <p class="section-subtitle">Languages, interests, and additional information</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="info-card-title">Languages</h3>
+                    </div>
+                    <div class="languages-list">
+                        <!-- Languages will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="info-card-title">Interests</h3>
+                    </div>
+                    <div class="interests-list">
+                        <!-- Interests will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 Areliez Vargas. Built with passion for quality engineering.</p>
+        </div>
+    </footer>
+
+    <!-- Embedded JSON Data -->
+    <script id="resume-data" type="application/json">
+{
+  "name": "Areliez Vargas",
+  "info": {
+    "label": "Senior QA Automation Engineer | API & Web | AI-Assisted QA",
+    "brief": "Senior Automation Engineer with 6+ years of experience designing and scaling automated testing frameworks across Web, API, and Desktop environments using Java, Python, and C#. Specialized in Behavior-Driven Development (Cucumber, Selenium, Selenide, REST Assured) and robust CI/CD integration across Azure DevOps and GitLab pipelines. Pioneer in incorporating AI tools (Claude, Claude Code, custom MCP integrations) to accelerate test design, automate Gherkin scenario generation, and optimize pull request code reviews.",
+    "quote": "Quality is not an act, it is a habit."
+  },
+  "contact": {
+    "email": "areliez.vargas@jalasoft.com",
+    "phone": "+591 70376674",
+    "website": "https://github.com/AKatrin",
+    "other": [{"label": "Personal Email", "flavor": "email", "value": "areliez.vargas@gmail.com"}]
+  },
+  "location": {
+    "city": "Cochabamba",
+    "region": "Cochabamba",
+    "country": "Bolivia"
+  },
+  "social": [
+    {"label": "GitHub", "network": "GitHub", "user": "AKatrin", "url": "https://github.com/AKatrin"},
+    {"label": "LinkedIn", "network": "LinkedIn", "user": "areliez-vargas", "url": "https://linkedin.com/in/areliez-vargas"}
+  ],
+  "employment": {
+    "history": [
+      {
+        "employer": "JalaSoft / Client Projects",
+        "position": "Senior Automation Engineer — Web, API & Mobile",
+        "start": "2025-01",
+        "end": "current",
+        "url": "https://www.jalasoft.com",
+        "location": "Cochabamba, Bolivia (Remote / Hybrid)",
+        "summary": "Automation framework architecture and AI-assisted QA workflow integration for enterprise web, API, and mobile applications.",
+        "keywords": ["Java", "Selenide", "TestNG", "REST Assured", "Cucumber", "Maven", "SQL Server", "Azure DevOps", "Allure", "Claude Code", "MCP", "Prettier", "Checkstyle", "Faker"],
+        "highlights": [
+          "Enforced code quality standards by configuring Checkstyle and Prettier across automation repositories, eliminating recurring PR review issues and unifying engineering practices.",
+          "Architected an Azure DevOps CI pipeline featuring isolated stages for Web, Mobile, API, and Core modules, incorporating style linting and unit tests as required pre-merge validation gates.",
+          "Integrated Microsoft SQL Server database connectivity with Java Faker to dynamically generate realistic test datasets, eliminating brittle hardcoded test values.",
+          "Configured scheduled CI/CD pipelines for automated nightly regression and smoke test executions, delivering first-hour feedback to the team every morning.",
+          "Spearheaded AI-assisted QA workflows using Claude and Claude Code to convert manual test cases into Cucumber/Gherkin scenarios, generate Java step definitions, and accelerate UI and API script creation.",
+          "Developed custom Claude skills and Model Context Protocol (MCP) integrations with Azure DevOps to automate work item creation, link User Stories directly to manual test cases, and ensure complete test traceability.",
+          "Triaged execution logs and Allure test reports to accurately differentiate application bugs from locator changes, timeouts, or intentional UI shifts; performed code reviews to flag flaky waits and duplicated steps."
+        ]
+      },
+      {
+        "employer": "JalaSoft / Client Projects",
+        "position": "Automation Engineer — API & GUI Automation",
+        "start": "2024-01",
+        "end": "2025-01",
+        "summary": "Core automation engineer for Application Tracking System v2, validating REST APIs and web interfaces.",
+        "keywords": ["Java", "Selenium WebDriver", "TestNG", "REST Assured", "Cucumber", "Gradle", "GitLab CI", "PostgreSQL", "Docker", "Postman", "Allure"],
+        "highlights": [
+          "Developed and maintained automated testing suites for the Application Tracking System v2 using Java, Selenium, TestNG, REST Assured, and Cucumber under BDD and Page Object Model (POM) patterns.",
+          "Executed continuous testing via GitLab CI/CD pipelines across functional, regression, and acceptance suites, systematically triaging Allure reports to identify functional defects.",
+          "Refactored web form filling mechanisms into reusable, parameterized data-driven components, increasing scenario reusability across test suites.",
+          "Integrated Checkstyle and Faker into Gradle automation workflows to enforce team code consistency and dynamic data provisioning.",
+          "Conducted REST API contract and functional validation using Postman and REST Assured, and actively participated in pull request code reviews."
+        ]
+      },
+      {
+        "employer": "JalaSoft / Client Projects",
+        "position": "Automation Engineer — Desktop Application Testing",
+        "start": "2023-01",
+        "end": "2024-01",
+        "summary": "Automated testing and cloud-based CI execution for native Windows desktop software.",
+        "keywords": ["TestComplete", "TestExecute", "JavaScript", "Azure DevOps", "Azure Virtual Machines", "Netlify", "Allure", "Confluence"],
+        "highlights": [
+          "Automated functional and regression test suites for desktop applications using SmartBear TestComplete and TestExecute with JavaScript.",
+          "Provisioned dedicated Microsoft Azure Virtual Machines with automated startup/shutdown routines and self-hosted Azure DevOps agents to run automated desktop suites on every merge to main.",
+          "Developed automated CI pipelines that publish execution and Allure test reports directly to Netlify, delivering real-time build visibility to distributed teams.",
+          "Deprecated obsolete functions and refactored the test suite codebase; authored comprehensive technical documentation in Confluence covering pipeline architecture and VM environment configuration."
+        ]
+      },
+      {
+        "employer": "JalaSoft",
+        "position": "Automation Engineer — Web Automation",
+        "start": "2022-01",
+        "end": "2023-01",
+        "summary": "Test automation architecture and living documentation for the Planning Poker collaboration application.",
+        "keywords": ["Java", "Selenium WebDriver", "TestNG", "REST Assured", "Cucumber", "Maven", "GitLab CI", "Lombok", "Owner", "Cuke-Doctor", "Allure"],
+        "highlights": [
+          "Expanded web UI automation suites for the Planning Poker application using Java, Selenium WebDriver, TestNG, and Cucumber BDD.",
+          "Refactored frameworks utilizing Page Object Model (POM) and Object-Oriented design principles, dramatically reducing code duplication using Lombok and Owner configuration libraries.",
+          "Proactively designed @in-progress automated scenarios from mockups and functional specs ahead of final acceptance criteria.",
+          "Centralized Checkstyle, code coverage, and Allure reporting through Maven Site plugin, and integrated Cuke-Doctor to produce living documentation for GUI scenarios.",
+          "Structured GitLab CI pipelines into distinct execution stages organized around schedules, builds, and code merges."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "history": [
+      {"institution": "Universidad Mayor de San Simón", "title": "B.S. in Systems Engineering (Ingeniería de Sistemas)", "area": "Systems Engineering & Computer Science", "studyType": "Bachelor's Degree", "start": "2010", "end": "Present", "summary": "Comprehensive academic coursework covering software architecture, algorithms, data structures, and software engineering."},
+      {"institution": "Fundación JalaSoft", "title": "Software Development Program", "area": "Software Development (Java, C#, Web)", "studyType": "Professional Training Program", "start": "2018", "end": "2021", "summary": "Intensive hands-on training in Object-Oriented Programming (OOP), Java, C#, Xamarin, HTML5, CSS3, JavaScript, and Git."},
+      {"institution": "Fundación JalaSoft", "title": "Automation Testing Program", "area": "Software Test Automation", "studyType": "Professional Training Program", "start": "2019", "end": "2019", "summary": "In-depth specialization in QA testing methodologies, web and API automation, Java, Selenium, Cucumber BDD, TestNG, Jenkins, Python, and Behave."},
+      {"institution": "Udemy", "title": "TestComplete with JavaScript", "area": "Desktop Test Automation", "studyType": "Certification", "start": "2023", "end": "2023", "summary": "Automated testing of desktop GUI applications using TestComplete and JavaScript."}
+    ]
+  },
+  "skills": {
+    "sets": [
+      {"name": "Test Automation & QA", "level": "master", "skills": ["Selenium WebDriver", "Selenide", "REST Assured", "Cucumber (BDD)", "TestNG", "JUnit", "TestComplete", "TestExecute", "Appium", "WinAppDriver", "Behave", "Postman", "Apache JMeter", "Allure Reporting", "Hamcrest", "Faker"]},
+      {"name": "AI-Assisted QA & Tooling", "level": "advanced", "skills": ["Claude (Anthropic)", "Claude Code", "Model Context Protocol (MCP)", "Reusable Claude QA Skills", "AI Test Scenario Generation", "Automated Gherkin & Step Synthesis", "AI-Assisted PR Code Review"]},
+      {"name": "Programming & Scripting", "level": "advanced", "skills": ["Java (Core & Advanced)", "Python", "JavaScript", "C#", "Ruby", "SQL", "Bash / Shell", "HTML5 & CSS3"]},
+      {"name": "CI/CD & Cloud Infrastructure", "level": "advanced", "skills": ["Azure DevOps (Pipelines & Agents)", "GitLab CI/CD", "Jenkins", "Docker & Docker Compose", "Docker Swarm", "Microsoft Azure (VMs)", "AWS (EC2, CloudWatch)", "Prometheus & Grafana"]},
+      {"name": "Framework Architecture & Methodologies", "level": "master", "skills": ["Page Object Model (POM)", "Behavior-Driven Development (BDD)", "Design Patterns (Factory, Strategy)", "Data-Driven Testing", "Living Documentation (Cuke-Doctor)", "Agile / Scrum Methodologies", "Git / GitHub / GitLab / Bitbucket", "Maven & Gradle"]},
+      {"name": "Databases & Test Data Management", "level": "intermediate", "skills": ["Microsoft SQL Server", "PostgreSQL", "MySQL", "Dynamic Test Data Generation (Faker)", "Database State Validation"]}
+    ]
+  },
+  "projects": [
+    {"title": "AutomationGUIPivotal", "category": "open-source", "role": "Creator & Architect", "url": "https://github.com/AKatrin/AutomationGUIPivotal", "repo": "https://github.com/AKatrin/AutomationGUIPivotal", "summary": "End-to-end automated testing framework for Pivotal Tracker with hybrid web GUI and API validation.", "keywords": ["Java", "Selenium WebDriver", "Cucumber BDD", "TestNG", "REST Assured", "Gradle", "POM"], "highlights": ["Implemented full Page Object Model (POM) test architecture integrating REST API backend validation with UI verification.", "Integrated Gradle build automation with Cucumber Gherkin scenario execution and detailed reporting."]},
+    {"title": "High-Throughput REST API Validation Engine", "category": "enterprise", "role": "Lead Automation Engineer", "summary": "Java and REST Assured batch test engine validating 3,000+ API requests with dynamic authentication.", "keywords": ["Java", "REST Assured", "Multi-Auth", "Apache POI", "JUnit"], "highlights": ["Engineered multi-threaded request processing handling 3,000+ requests with configurable authentication schemes.", "Automated output generation producing structured Excel audit reports with response status and response body diffs."]},
+    {"title": "SeleniumPOM Web Automation Framework", "category": "open-source", "role": "Creator", "url": "https://github.com/AKatrin/SeleniumPOM", "repo": "https://github.com/AKatrin/SeleniumPOM", "summary": "Scalable web automation framework demonstrating clean Page Object Model architecture and ExtentReports.", "keywords": ["Java", "Selenium WebDriver", "TestNG", "ExtentReports", "Maven"], "highlights": ["Clean POM implementation with explicit waits, centralized configuration, and rich HTML reporting."]},
+    {"title": "AI-Driven QA & MCP Integration Workflow", "category": "enterprise", "role": "Automation Engineer / Implementer", "summary": "Automated testing and task lifecycle orchestration integrating Claude Code with Azure DevOps via MCP.", "keywords": ["Claude Code", "MCP", "Azure DevOps", "Gherkin", "Prompt Engineering"], "highlights": ["Automated User Story and test case generation in Azure DevOps directly from feature specifications.", "Converted manual acceptance test cases into executable Gherkin features, Java step definitions, and API test scripts."]}
+  ],
+  "languages": [
+    {"language": "Spanish", "level": "Native"},
+    {"language": "English", "level": "Professional Working Proficiency"}
+  ],
+  "interests": [
+    {"name": "Software Quality Engineering", "summary": "Continuous testing architectures, SDET practices, and test flakiness mitigation.", "keywords": ["Test Architecture", "Clean Code", "BDD"]},
+    {"name": "AI in Software Engineering", "summary": "Leveraging agentic workflows and LLM tool-calling (MCP) to automate software verification.", "keywords": ["Agentic AI", "MCP", "Automated Code Review"]}
+  ]
+}
+    </script>
+
+    <script>
+        // Parse resume data
+        const resumeData = JSON.parse(document.getElementById('resume-data').textContent);
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Populate Experience Timeline
+        function populateExperience() {
+            const timeline = document.querySelector('.timeline');
+            resumeData.employment.history.forEach((job, index) => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item fade-in';
+                item.style.animationDelay = `${index * 0.1}s`;
+                
+                const startDate = job.start === 'current' ? 'Jan 2025' : formatDate(job.start);
+                const endDate = job.end === 'current' ? 'Present' : formatDate(job.end);
+                
+                item.innerHTML = `
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">${escapeHtml(job.position)}</h3>
+                        <div class="timeline-company">${escapeHtml(job.employer)}</div>
+                        <div class="timeline-meta">
+                            <span class="timeline-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                ${startDate} - ${endDate}
+                            </span>
+                            ${job.location ? `
+                                <span class="timeline-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    ${escapeHtml(job.location)}
+                                </span>
+                            ` : ''}
+                        </div>
+                        ${job.summary ? `<p class="timeline-summary">${escapeHtml(job.summary)}</p>` : ''}
+                    </div>
+                    ${job.highlights ? `
+                        <ul class="timeline-highlights">
+                            ${job.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}
+                        </ul>
+                    ` : ''}
+                    ${job.keywords ? `
+                        <div class="timeline-keywords">
+                            ${job.keywords.map(k => `<span class="keyword-tag">${escapeHtml(k)}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                timeline.appendChild(item);
+            });
+        }
+
+        // Populate Skills
+        function populateSkills() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            const icons = {
+                'Test Automation & QA': 'fas fa-vial',
+                'AI-Assisted QA & Tooling': 'fas fa-robot',
+                'Programming & Scripting': 'fas fa-code',
+                'CI/CD & Cloud Infrastructure': 'fas fa-cloud',
+                'Framework Architecture & Methodologies': 'fas fa-sitemap',
+                'Databases & Test Data Management': 'fas fa-database'
+            };
+            
+            resumeData.skills.sets.forEach((set, index) => {
+                const category = document.createElement('div');
+                category.className = 'skill-category fade-in';
+                category.style.animationDelay = `${index * 0.1}s`;
+                
+                category.innerHTML = `
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="${icons[set.name] || 'fas fa-cog'}"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-category-title">${escapeHtml(set.name)}</h3>
+                            <span class="skill-category-level">${escapeHtml(set.level)}</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        ${set.skills.map(skill => `<span class="skill-tag">${escapeHtml(skill)}</span>`).join('')}
+                    </div>
+                `;
+                skillsGrid.appendChild(category);
+            });
+        }
+
+        // Populate Projects
+        function populateProjects() {
+            const projectsGrid = document.querySelector('.projects-grid');
+            resumeData.projects.forEach((project, index) => {
+                const card = document.createElement('div');
+                card.className = 'project-card fade-in';
+                card.style.animationDelay = `${index * 0.1}s`;
+                
+                card.innerHTML = `
+                    <div class="project-header">
+                        <span class="project-category">${escapeHtml(project.category)}</span>
+                        <h3 class="project-title">${escapeHtml(project.title)}</h3>
+                        <div class="project-role">${escapeHtml(project.role)}</div>
+                        <p class="project-summary">${escapeHtml(project.summary)}</p>
+                    </div>
+                    <div class="project-body">
+                        ${project.highlights ? `
+                            <ul class="project-highlights">
+                                ${project.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        ${project.keywords ? `
+                            <div class="project-keywords">
+                                ${project.keywords.map(k => `<span class="project-keyword">${escapeHtml(k)}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        ${project.url ? `
+                            <a href="${escapeHtml(project.url)}" target="_blank" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        ` : ''}
+                    </div>
+                `;
+                projectsGrid.appendChild(card);
+            });
+        }
+
+        // Populate Education
+        function populateEducation() {
+            const educationGrid = document.querySelector('.education-grid');
+            resumeData.education.history.forEach((edu, index) => {
+                const item = document.createElement('div');
+                item.className = 'education-item fade-in';
+                item.style.animationDelay = `${index * 0.1}s`;
+                
+                const endDate = edu.end === 'Present' ? 'Present' : edu.end;
+                
+                item.innerHTML = `
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-title">${escapeHtml(edu.title)}</h3>
+                        <div class="education-institution">${escapeHtml(edu.institution)}</div>
+                        <div class="education-meta">
+                            <span><i class="fas fa-calendar-alt"></i> ${edu.start} - ${endDate}</span>
+                            <span><i class="fas fa-certificate"></i> ${escapeHtml(edu.studyType)}</span>
+                        </div>
+                        ${edu.summary ? `<p class="education-summary">${escapeHtml(edu.summary)}</p>` : ''}
+                    </div>
+                `;
+                educationGrid.appendChild(item);
+            });
+        }
+
+        // Populate Languages
+        function populateLanguages() {
+            const languagesList = document.querySelector('.languages-list');
+            resumeData.languages.forEach(lang => {
+                const item = document.createElement('div');
+                item.className = 'language-item';
+                item.innerHTML = `
+                    <span class="language-name">${escapeHtml(lang.language)}</span>
+                    <span class="language-level">${escapeHtml(lang.level)}</span>
+                `;
+                languagesList.appendChild(item);
+            });
+        }
+
+        // Populate Interests
+        function populateInterests() {
+            const interestsList = document.querySelector('.interests-list');
+            resumeData.interests.forEach(interest => {
+                const item = document.createElement('div');
+                item.className = 'interest-item';
+                item.innerHTML = `
+                    <div class="interest-name">${escapeHtml(interest.name)}</div>
+                    <p class="interest-summary">${escapeHtml(interest.summary)}</p>
+                    ${interest.keywords ? `
+                        <div class="interest-keywords">
+                            ${interest.keywords.map(k => `<span class="interest-keyword">${escapeHtml(k)}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                interestsList.appendChild(item);
+            });
+        }
+
+        // Helper functions
+        function formatDate(dateStr) {
+            const [year, month] = dateStr.split('-');
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return `${months[parseInt(month) - 1]} ${year}`;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Initialize all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            populateExperience();
+            populateSkills();
+            populateProjects();
+            populateEducation();
+            populateLanguages();
+            populateInterests();
+            
+            // Add fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
